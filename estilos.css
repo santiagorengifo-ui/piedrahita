@@ -1,0 +1,504 @@
+/* =========================================================
+   ESTILOS GENERALES
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+header {
+    background-color: #222222;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ENCABEZADO FIJO
+========================================================= */
+/*
+header {
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+*/
+
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+
+.subtitulo {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+========================================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+
+nav a:hover {
+    background-color: white;
+    color: #222222;
+}
+
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+main {
+    padding: 20px;
+}
+
+
+
+/* =========================================================
+   SECCIONES GENERALES
+========================================================= */
+
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+	/*scroll-margin-top: 150px; mantener fijo el menú */
+}
+
+
+section h2 {
+    margin-top: 0;
+}
+
+
+
+/* =========================================================
+   SECCIÓN INICIO
+========================================================= */
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.inicio-texto {
+    flex: 1 1 400px;
+}
+
+
+.inicio-imagen {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   IMAGEN DE PERFIL
+========================================================= */
+
+.foto-perfil {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.boton:hover {
+    background-color: #444444;
+}
+
+
+
+/* =========================================================
+   HABILIDADES
+========================================================= */
+
+.lista-habilidades {
+    padding-left: 20px;
+}
+
+
+.lista-habilidades li {
+    margin-bottom: 10px;
+}
+
+
+
+/* =========================================================
+   CONTENEDOR DE PROYECTOS
+========================================================= */
+
+.contenedor-proyectos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+
+
+/* =========================================================
+   TARJETAS DE PROYECTOS
+========================================================= */
+
+.proyecto {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+
+.proyecto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.proyecto h3 {
+    margin-bottom: 10px;
+}
+
+
+
+/* =========================================================
+   IMÁGENES GENERALES
+========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+
+/* Cada elemento de la galería */
+
+.galeria figure {
+    flex: 1 1 240px;
+    max-width: 260px;
+    margin: 0;
+
+    background-color: #fafafa;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================================
+   IMÁGENES DE LA GALERÍA
+========================================================= */
+
+.galeria figure img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+
+
+/* =========================================================
+   EFECTO AL PASAR EL MOUSE
+========================================================= */
+
+.galeria figure:hover img {
+    transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   DESCRIPCIÓN DE LAS IMÁGENES
+========================================================= */
+
+.galeria figcaption {
+    padding: 12px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================================
+   VISOR DE IMÁGENES
+========================================================= */
+
+.visor {
+
+    /* Oculto inicialmente */
+    display: none;
+
+    /* Se mantiene sobre toda la página */
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /* Fondo oscuro transparente */
+    background-color: rgba(0, 0, 0, 0.9);
+
+    /* Centra la imagen */
+    justify-content: center;
+    align-items: center;
+
+    /* Lo coloca por encima de la página */
+    z-index: 1000;
+
+    padding: 40px;
+}
+
+
+
+/* =========================================================
+   IMAGEN AMPLIADA
+========================================================= */
+
+.imagen-ampliada {
+
+    max-width: 90%;
+    max-height: 90%;
+
+    width: auto;
+    height: auto;
+
+    /* La muestra completa, sin recortarla */
+    object-fit: contain;
+
+    border-radius: 5px;
+}
+
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.cerrar {
+
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    color: white;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.cerrar:hover {
+    color: #cccccc;
+}
+
+
+
+/* =========================================================
+   PIE DE PÁGINA
+========================================================= */
+
+footer {
+    background-color: #222222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 40px;
+}
+
+
+footer h2 {
+    margin-top: 0;
+}
+
+
+footer a {
+    color: white;
+}
+
+
+footer a:hover {
+    text-decoration: none;
+}
+
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   ADAPTACIÓN PARA PANTALLAS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .inicio {
+        text-align: center;
+    }
+
+
+    section {
+        margin: 20px auto;
+
+        padding: 20px;
+    }
+
+
+    .contenedor-proyectos {
+        flex-direction: column;
+    }
+
+
+    .galeria {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .galeria figure {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .visor {
+        padding: 20px;
+    }
+
+
+    .imagen-ampliada {
+        max-width: 100%;
+
+        max-height: 85%;
+    }
+
+}
+
+}
